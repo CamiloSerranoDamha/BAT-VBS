@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Serrano Damha"
+  given-names: "Camilo"
+  orcid: "https://orcid.org/0009-0001-3838-6055"
+title: "Binary Activity Thermodynamics-volatility basis set (BAT-VBS) model (Fortran)"
+version: 1.0.0
+doi: 10.5281/zenodo.8270273
+date-released: 2023-08-21
+url: "https://github.com/CamiloSerranoDamha/BAT-VBS"
