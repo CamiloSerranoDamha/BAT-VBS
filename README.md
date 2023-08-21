@@ -14,3 +14,5 @@ Standalone programs that illustrate how to run the different functions of the BA
 
 4) EXAMPLES_INFORMATION.pdf: 
 PDF file that describes the different functions of the BAT-VBS model (EXAMPLE_BAT_INVERSION_VBS.f90, EXAMPLE_BAT_INVERSION.f90 EXAMPLE_BAT.f90)
+
+[![DOI](https://zenodo.org/badge/679873639.svg)](https://zenodo.org/badge/latestdoi/679873639)
