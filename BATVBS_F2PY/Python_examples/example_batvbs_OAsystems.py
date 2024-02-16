@@ -141,7 +141,6 @@ C_OA_water_HOA_OOA = np.zeros(np.size(a_water), np.float64)
 # Hygroscopicity parameter kappa of OA, related to the hygroscopic growth factor
 kappa_HOA = np.zeros(np.size(a_water), np.float64)
 kappa_OOA = np.zeros(np.size(a_water), np.float64)
-kappa_OOA = np.zeros(np.size(a_water), np.float64)
 kappa_HOA_OOA = np.zeros(np.size(a_water), np.float64)
 
 # Start simulation
@@ -197,9 +196,10 @@ for i in range(0, np.size(a_water)):
     
     # calculate the hygroscopicity parameter kappa of OA:
     # ** Warming: You will get division by 0 error at RH = 0 **
-    kappa_HOA[i] = ((np.float64(1.0)/a_water[i])-np.float64(1.0)) * ((V_water_HOA)/V_org_HOA)
-    kappa_OOA[i] = ((np.float64(1.0)/a_water[i])-np.float64(1.0)) * ((V_water_OOA)/V_org_OOA)
-    kappa_HOA_OOA[i] = ((np.float64(1.0)/a_water[i])-np.float64(1.0)) * ((V_water_HOA_OOA)/V_org_HOA_OOA)       
+    if a_water[i] != np.float64(0.0):
+        kappa_HOA[i] = ((np.float64(1.0)/a_water[i])-np.float64(1.0)) * ((V_water_HOA)/V_org_HOA)
+        kappa_OOA[i] = ((np.float64(1.0)/a_water[i])-np.float64(1.0)) * ((V_water_OOA)/V_org_OOA)
+        kappa_HOA_OOA[i] = ((np.float64(1.0)/a_water[i])-np.float64(1.0)) * ((V_water_HOA_OOA)/V_org_HOA_OOA)       
 
 
 
